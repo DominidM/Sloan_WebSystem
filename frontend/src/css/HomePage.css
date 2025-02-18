@@ -1,0 +1,61 @@
+/* Contenedor principal */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f4f8;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Sección de bienvenida */
+  .hero-section {
+    margin-bottom: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  /* Contenedor de botones */
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Estilo de los botones */
+  .home-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Escala para darle un efecto dinámico */
+  }
+  
+  /* Efecto de foco en el botón */
+  .home-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #0056b3;
+  }
+  
