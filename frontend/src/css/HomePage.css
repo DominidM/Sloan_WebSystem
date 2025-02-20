@@ -1,61 +1,140 @@
-/* Contenedor principal */
-.home-page {
-    display: flex;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef3f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 5%;
+  width: 100%;
+  border-bottom: 4px solid #1a3dc1;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1a3dc1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #1a3dc1;
+}
+
+.cart-button {
+  background-color: #1a3dc1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* el cuadro azul */
+.hero-banner {
+  width: 100vw;
+  max-width: 10000px;
+  height: 480px;
+  background-color: #6e7dfb;
+  border-radius: 10px;
+  position: relative;
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: white;
+}
+
+/* Productos destacados */
+.featured-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.product-placeholder {
+  flex: 1 1 200px;
+  max-width: 200px;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #f0f4f8;
     text-align: center;
-    padding: 20px;
   }
-  
-  /* Sección de bienvenida */
-  .hero-section {
-    margin-bottom: 3rem;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 0.5rem;
-  }
-  
-  /* Contenedor de botones */
-  .buttons-container {
-    display: flex;
+
+  .nav-links {
     flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 400px;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  /* Estilo de los botones */
-  .home-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  .hero-section {
+    flex-direction: column;
   }
-  
-  .home-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05); /* Escala para darle un efecto dinámico */
+
+  .hero-banner {
+    width: 90vw;
   }
-  
-  /* Efecto de foco en el botón */
-  .home-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px #0056b3;
+
+  .featured-products {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .product-placeholder {
+    width: 90%;
+    max-width: 300px;
+  }
+}
