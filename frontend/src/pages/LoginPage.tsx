@@ -18,8 +18,9 @@ export default function LoginPage() {
 
   return (
     <div className="login-page">
-      <h1>{isLogin ? 'Iniciar sesión - login -' : 'Registrarse   sing in -'}</h1> {/* Cambio dinámico de título */}
       <div className="form-container">
+        <h1>{isLogin ? 'Iniciar sesión' : 'Registrarse'}</h1> {/* Cambio dinámico de título */}
+        
         {isLogin ? (
           <form onSubmit={handleSubmit} className="login-form">
             <div className="input-group">

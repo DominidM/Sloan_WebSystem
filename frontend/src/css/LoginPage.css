@@ -1,109 +1,89 @@
-/* Fondo de la página */
-.login-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f3f4f6; /* Fondo gris claro */
-  }
-  
-  /* Estilo del contenedor del formulario */
-  .form-container {
-    background: #ffffff; /* Fondo blanco */
-    padding: 2rem 3rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Estilo para el título */
-  .form-container h1 {
-    font-size: 24px;
-    margin-bottom: 1.5rem;
-    color: #333333;
-    font-weight: 600;
-  }
-  
-  /* Estilo de los campos de entrada */
-  .input-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
-  
-  .input-group label {
-    font-size: 14px;
-    color: #333333;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 0.8rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .input-group input:focus {
-    border-color: #0056b3;
-    outline: none;
-  }
-  
-  /* Botón de submit */
-  .login-btn {
-    width: 100%;
-    padding: 1rem;
-    background-color: #007bff; /* Azul de fondo */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-btn:hover {
-    background-color: #0056b3; /* Azul más oscuro en hover */
-  }
-  
-  /* Estilo del botón de cambio entre login y registro */
-  .toggle-form {
-    margin-top: 1rem;
-  }
-  
-  .toggle-btn {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: underline;
-  }
-  
-  .toggle-btn:hover {
-    color: #0056b3;
-  }
-  
-  /* Transición suave para el formulario */
-  .form-container {
-    transform: scale(0.9);
-    animation: form-animation 0.4s forwards;
-  }
-  
-  @keyframes form-animation {
-    0% {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
+/* Fondo general */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #e3f2fd; /* Azul muy claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.login-container {
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  height: 100vh; /* Ocupa todo el alto de la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja del formulario */
+.login-box {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+}
+
+/* Título */
+.login-box h1 {
+  font-size: 26px;
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+/* Campos de entrada */
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: #0d47a1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #64b5f6;
+  font-size: 16px;
+}
+
+/* Botón */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #1976d2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-btn:hover {
+  background: #0d47a1;
+}
+
+/* Enlace de registro */
+.register-link {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
