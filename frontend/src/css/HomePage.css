@@ -1,4 +1,5 @@
 /* ---------------------Botón de Modo Oscuro -------------------------*/
+/*AVANZADO*/
 .dark-mode-toggle {
   background-color: transparent;
   border: 2px solid #333;
@@ -105,17 +106,17 @@
 
 /* ----------------------------------------------------------General --------------------------------------------*/
 .home-page {
-  padding-top: 1260px; /* Ajusta según la altura del navbar */
+  padding-top: 100%; /* Ajusta según la altura del navbar */
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   min-height: 110vh;
-  padding-bottom: 150px;
+  padding-bottom: 40px;
 
   max-width: 1200px; /* Controla el ancho máximo */
   width: 100%; /* Se adapta a la pantalla */
-  margin: 0 auto; /* Centra el contenido */
-  padding-left: 250px; /* Espacio a los lados */
-  padding-right: 250px;
+  margin: 0; /* Centra el contenido */
+  padding-left: 200px; /* Espacio a los lados */
+  padding-right: 200px;
 }
 
 /*---------------------------------------------------------------- Navbar -------------------------------------------------------------*/
