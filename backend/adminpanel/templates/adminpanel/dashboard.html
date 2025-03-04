@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Sloan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Panel Administrativo</h1>
+        <div class="dashboard-links">
+            <a href="{% url 'productos' %}" class="card">📦 Gestionar Productos</a>
+            <a href="{% url 'clientes' %}" class="card">👤 Gestionar Clientes</a>
+            <a href="{% url 'ventas' %}" class="card">💰 Gestionar Ventas</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h1>Lista de Ventas</h1>
+<a href="{% url 'crear_venta' %}">Agregar Venta</a>
+<ul>
+    {% for venta in ventas %}
+        <li>
+            Venta #{{ venta.id }} - Cliente: {{ venta.client.username }} - Total: {{ venta.total_price }}
+            <a href="{% url 'editar_venta' venta.id %}">Editar</a>
+            <a href="{% url 'eliminar_venta' venta.id %}">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'dashboard' %}">
+    <button>Volver al inicio</button>
+</a>
