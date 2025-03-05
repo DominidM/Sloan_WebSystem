@@ -1,14 +1,32 @@
-<h1>Lista de Productos</h1>
-<a href="{% url 'crear_producto' %}">Agregar Producto</a>
-<ul>
-    {% for producto in productos %}
-        <li>
-            {{ producto.name }} - ${{ producto.price }}
-            <a href="{% url 'editar_producto' producto.id %}">Editar</a>
-            <a href="{% url 'eliminar_producto' producto.id %}">Eliminar</a>
-        </li>
-    {% endfor %}
-</ul>
-<a href="{% url 'dashboard' %}">
-    <button>Volver al inicio</button>
-</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="{% static 'adminpanel/css/lista_productos.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Productos</h1>
+        <a href="{% url 'crear_producto' %}" class="btn agregar">+ Agregar Producto</a>
+        <ul class="product-list">
+            {% for producto in productos %}
+                <li class="product-item">
+                    <span class="product-name">{{ producto.name }}</span>
+                    <span class="product-price">${{ producto.price }}</span>
+                    <div class="product-actions">
+                        <a href="{% url 'editar_producto' producto.id %}" class="btn edit">✏️ Editar</a>
+                        <a href="{% url 'eliminar_producto' producto.id %}" class="btn delete">🗑️ Eliminar</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'dashboard' %}" class="btn volver">🏠 Volver al Inicio</a>
+    </div>
+
+    <!-- Cargar el script -->
+    <script src="{% static 'adminpanel/js/lista_productos.js' %}"></script>
+</body>
+</html>
