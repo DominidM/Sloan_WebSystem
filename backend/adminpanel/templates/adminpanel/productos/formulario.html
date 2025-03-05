@@ -1,7 +1,23 @@
-<h1>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Producto</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
-<a href="{% url 'productos' %}">Volver</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Producto</title>
+    <link rel="stylesheet" href="{% static 'adminpanel/css/form.css' %}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Producto</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar</button>
+        </form>
+        <a href="{% url 'productos' %}">Volver</a>
+    </div>
+
+</body>
+</html>

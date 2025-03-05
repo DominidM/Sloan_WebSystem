@@ -2,6 +2,7 @@ from django.urls import path
 from .views import listar_productos, crear_producto, editar_producto, eliminar_producto
 from .views import listar_clientes, crear_cliente, editar_cliente, eliminar_cliente 
 from .views import listar_ventas, crear_venta, editar_venta, eliminar_venta
+from .views import dashboard
 from .views import RegisterView, LoginView
 
 
@@ -24,5 +25,6 @@ urlpatterns = [
 
     path('register/', RegisterView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login'),
+    path('', dashboard, name='dashboard'),
 
 ]

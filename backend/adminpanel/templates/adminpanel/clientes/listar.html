@@ -1,15 +1,30 @@
-<h1>Lista de Clientes</h1>
-<a href="{% url 'crear_cliente' %}">Agregar Cliente</a>
-<ul>
-    {% for cliente in clientes %}
-        <li>
-            {{ cliente.username }} - {{ cliente.email }}
-            <a href="{% url 'editar_cliente' cliente.id %}">Editar</a>
-            <a href="{% url 'eliminar_cliente' cliente.id %}">Eliminar</a>
-        </li>
-    {% endfor %}
-</ul>
-<a href="{% url 'dashboard' %}">
-    <button>Volver al inicio</button>
-</a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="{% static 'adminpanel/css/clientes.css' %}">
+</head>
+<body>
 
+    <div class="container">
+        <h1>Lista de Clientes</h1>
+        <a href="{% url 'crear_cliente' %}" class="add-btn">Agregar Cliente</a>
+        <ul>
+            {% for cliente in clientes %}
+                <li>
+                    <span>{{ cliente.username }} - {{ cliente.email }}</span>
+                    <div class="action-links">
+                        <a href="{% url 'editar_cliente' cliente.id %}" class="edit-btn">Editar</a>
+                        <a href="{% url 'eliminar_cliente' cliente.id %}" class="delete-btn">Eliminar</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'dashboard' %}" class="back-btn">Volver al inicio</a>
+    </div>
+
+</body>
+</html>
